@@ -1,0 +1,152 @@
+:root{--red:#c40000;--dark:#1a1a1a;--bg:#f7f7f7;--w:600px}
+html{scroll-behavior:smooth}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Open Sans',Arial,sans-serif;color:var(--dark);font-size:14px;line-height:1.4}
+a{color:inherit}
+h2{font-weight:700;font-size:22px;text-transform:uppercase;text-align:center}
+.container{max-width:var(--w);margin:0 auto}
+.btn{display:inline-block;white-space:nowrap;background:var(--red);color:#fff;text-transform:uppercase;text-decoration:none;border:0;cursor:pointer;font:600 12px 'Open Sans',sans-serif;transition:background .2s}
+.btn:hover{background:#9c0000}
+.btn-xs{padding:4px 14px;font-size:9px}
+.btn-lg{padding:12px 0;width:136px;width:auto;min-width:135px;padding:12px 20px}
+.btn-form{width:100%;padding:12px;margin-top:10px}
+
+/* HERO */
+.hero{background:#5d8a2f url(img/hero.jpg) center top/cover;color:#fff;min-height:480px;padding:20px 20px 60px;position:relative}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;font-size:10px}
+.logo{display:flex;gap:8px;align-items:center;text-decoration:none}
+.logo b{display:block;font:400 20px 'Montserrat',sans-serif;letter-spacing:.5px}
+.logo small{font-size:9px;display:block}
+.rep{text-align:center}.rep small{display:block;font-size:8px}.rep b{font-size:13px;font-weight:600}
+.call{text-align:center}.call b{display:block;font-size:12px;margin-bottom:4px}
+.hero-body{max-width:var(--w);margin:60px auto 0;text-align:center;padding-left:calc(var(--w)*.46)}
+.hero-body h1{font-size:28px;text-transform:uppercase;font-weight:700;text-align:left;line-height:1.2}
+.sub{text-transform:uppercase;font-size:14px;text-align:left;margin-bottom:28px}
+.perks{list-style:none;display:flex;gap:34px;justify-content:center;font-size:9px;margin-bottom:30px}
+.perks svg{display:block;margin:0 auto 6px;width:30px;height:30px;fill:none;stroke:#fff;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.or{font-size:10px;margin-top:10px;text-align:right}.or a{text-transform:uppercase}
+
+/* ПРЕИМУЩЕСТВА */
+.adv{background:var(--bg);padding:26px 20px 34px}
+.adv h2{font-size:17px;margin-bottom:34px}
+.adv-grid{max-width:var(--w);margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
+.adv article{padding:0 10px}
+.adv svg{width:44px;height:44px;fill:none;stroke:var(--red);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.adv h3{font-size:12px;margin:12px 0 14px}
+.adv p{font-size:9.5px;line-height:1.6}
+.adv p a{color:var(--red)}
+
+/* ФОРМА */
+.order{background:#222 url(img/form-bg.jpg) center/cover;color:#fff;padding:50px 20px 60px}
+.order-in{max-width:var(--w);margin:0 auto}
+.order h2{text-align:left;font-size:21px;line-height:1.5;margin-bottom:10px}
+.order p{font-size:13px;margin-bottom:12px}
+#form{width:136px}
+#form input{width:134px;display:block;margin-bottom:8px;padding:8px 8px;border:0;border-radius:3px;font:400 9px 'Open Sans',sans-serif}
+#form .btn-form{width:136px;margin-top:0;font-size:9.5px;padding:12px 0}
+.msg{margin-top:10px;font-size:11px!important;width:260px;line-height:1.4}.msg.err{color:#ff9d9d}.msg.ok{color:#b6f5b6}
+
+/* КАТАЛОГ */
+.catalog{background:#fff;padding:40px 20px 40px}
+.slider{max-width:660px;margin:0 auto 56px;display:flex;align-items:center;justify-content:space-between;gap:6px}
+.viewport{width:594px;max-width:100%;overflow:hidden}
+.track{display:flex;transition:transform .55s cubic-bezier(.65,0,.25,1)}
+.slide{flex:0 0 100%;position:relative;height:333px}
+.slide .sm{position:absolute;left:58px;top:2px;width:236px;height:auto}
+.slide .ss{position:absolute;left:366px;top:14px;width:128px;height:auto}
+.slide .sl{position:absolute;left:338px;top:232px;width:130px;height:auto}
+.arrow{flex:0 0 28px;height:40px;background:none;border:0;cursor:pointer;position:relative}
+.arrow:before{content:"";position:absolute;top:10px;left:6px;width:14px;height:14px;border:solid var(--red);border-width:0 0 5px 5px;transform:rotate(45deg)}
+#next:before{border-width:5px 5px 0 0;transform:rotate(45deg);left:2px}
+.arrow:hover:before{border-color:#8f0000}
+.cat-title{font-weight:400;font-size:20px;margin-bottom:26px}
+.tabs{display:flex;justify-content:center;margin-bottom:30px}
+.tab{background:#fff;border:1px solid #ccc;color:#555;font:400 11px 'Open Sans',sans-serif;text-transform:uppercase;width:138px;height:30px;margin:0 -4px;transform:skewX(-22deg);cursor:pointer}
+.tab span{display:inline-block;transform:skewX(22deg)}
+.tab.active{background:var(--red);border-color:var(--red);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(3,186px);gap:14px;justify-content:center;max-width:var(--w);margin:0 auto}
+
+.flip{perspective:1000px}
+.inner{display:grid;height:100%;position:relative;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.4,.1,.2,1)}
+.flip.turned .inner{transform:rotateY(180deg)}
+.inner>.card{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:#fff}
+.inner>.card.back{transform:rotateY(180deg)}
+.card{border:1px solid #ddd;min-height:274px;height:100%;padding:12px 12px 10px;text-align:center;display:flex;flex-direction:column}
+.card .pic{height:128px;width:116px;background:center/contain no-repeat;margin:0 auto 12px}
+.card h4{font:600 11px 'Montserrat',sans-serif;margin-bottom:10px}
+.card p{font-size:10px;line-height:1.7;margin-bottom:6px}
+.card a{color:var(--red);font-size:9px;text-transform:uppercase}
+.card .foot{margin-top:auto;border-top:1px solid #eee;padding-top:8px;display:flex;justify-content:space-between;align-items:center;text-align:left}
+.old{display:block;text-decoration:line-through;font-size:9px;color:#666}
+.new{font-weight:700;font-size:13px}
+.card .btn{font-size:10px;padding:0;width:82px;height:24px}
+.card.back{justify-content:flex-start;text-align:left}
+.card.back ul{list-style:none;font-size:9.5px;line-height:1.4;margin-bottom:auto}
+.card.back li{padding-left:10px;position:relative;margin-bottom:4px}
+.card.back li:before{content:"";position:absolute;left:0;top:4px;width:4px;height:4px;background:var(--red)}
+.card.back .back-link{text-align:center;margin:4px 0 8px}
+
+/* ОТЗЫВЫ */
+.reviews{padding:20px 20px 30px}
+.reviews h2{font-size:18px;margin-bottom:20px}
+.rev-list{max-width:540px;margin:0 auto}
+.rev{display:flex;gap:34px;margin-bottom:36px}
+.ava{flex:0 0 98px;height:98px;border-radius:50%;background:#aaa center/cover no-repeat}
+.a1{background-image:url(img/ava1.jpg)}.a2{background-image:url(img/ava2.jpg)}.a3{background-image:url(img/ava3.jpg)}
+.rev h4{font-size:12px}
+.rev small{font-size:9px;color:#555;display:block;margin-bottom:6px}
+.rev p{font-size:9.5px;line-height:1.55;margin-bottom:8px}
+
+/* КАРТА */
+.map{background:url(img/map.jpg) center/100% 100% no-repeat;aspect-ratio:1884/502;min-height:300px;position:relative}
+.map-card{position:absolute;left:38.4%;top:0;width:24.4%;height:53.8%;min-width:250px;background:var(--red);color:#fff;text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:clamp(14px,2.2vw,34px);padding:0 10px}
+.map-card p{font-size:clamp(11px,1.05vw,15px);margin:0}
+.map-card b{font-size:clamp(11px,1.05vw,15px);display:block;margin:0}
+.soc{display:flex;justify-content:center;gap:clamp(10px,1.2vw,20px)}
+.soc a{width:clamp(30px,2.7vw,50px);height:clamp(30px,2.7vw,50px);border:1.5px solid #fff;border-radius:50%;color:#fff;text-decoration:none;display:grid;place-items:center;font:600 clamp(14px,1.5vw,24px) Arial}
+.soc svg{width:50%;height:50%;fill:none;stroke:#fff;stroke-width:1.8}
+
+/* ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА / ТІЛ АУЫСТЫРҒЫШ */
+.lang{display:flex;border:1.5px solid #fff;border-radius:16px;overflow:hidden;align-self:flex-start}
+.lang button{background:rgba(0,0,0,.25);color:#fff;border:0;padding:5px 11px;font:600 10px 'Montserrat',sans-serif;letter-spacing:.5px;cursor:pointer;transition:background .2s}
+.lang button+button{border-left:1.5px solid #fff}
+.lang button:hover{background:rgba(196,0,0,.7)}
+.lang button.on{background:var(--red)}
+.lang button:focus-visible{outline:2px solid #fff;outline-offset:-3px}
+
+/* МОБИЛЬНАЯ ВЕРСИЯ */
+@media(max-width:800px){
+  .top{flex-wrap:wrap;justify-content:center}
+  .hero-body{padding:0;margin-top:40px}.hero-body h1,.sub{text-align:center}
+  .perks{gap:16px}.or{text-align:center}
+  .adv-grid{grid-template-columns:1fr}
+  .order-in{padding:0}
+  .grid{grid-template-columns:repeat(auto-fit,186px)}
+  .slider{zoom:.58}
+  .rev{flex-direction:column;align-items:center;text-align:center;gap:10px}
+  .map{background-size:cover;background-position:60% center;aspect-ratio:auto;min-height:380px}.map-card{left:50%;transform:translateX(-50%);height:190px}}
+
+.card .pic{transition:opacity .2s}
+.tab:focus-visible,.btn:focus-visible,input:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+input:focus{box-shadow:0 0 0 2px rgba(196,0,0,.5)}
+input.bad{box-shadow:0 0 0 2px #ff5a5a}
+/* всплывающая форма */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.65);display:flex;align-items:center;justify-content:center;padding:20px;z-index:50}
+.modal[hidden]{display:none}
+.modal-box{background:#fff;width:100%;max-width:320px;padding:28px 26px 26px;position:relative}
+.modal-box h3{font-size:15px;text-transform:uppercase;margin-bottom:6px}
+.modal-box p{font-size:11px;margin-bottom:14px}
+.modal-box input{width:100%;display:block;margin-bottom:8px;padding:10px;border:1px solid #ccc;border-radius:3px;font:400 12px 'Open Sans',sans-serif}
+.modal-box .btn-form{width:100%;padding:12px;margin-top:4px}
+.modal-box .msg{width:auto;color:#333}.modal-box .msg.err{color:#c40000}.modal-box .msg.ok{color:#1a7f1a}
+.modal-x{position:absolute;top:6px;right:12px;background:none;border:0;font-size:26px;cursor:pointer;color:#666}
+
+@media(prefers-reduced-motion:reduce){.inner{transition:none}}
+/* карта: настоящая, двигается мышью/пальцем; картинка — запасной фон */
+.map-frame{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:1}
+.map-card{z-index:2}
+/* кнопка «наверх» */
+.to-top{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:50%;background:var(--red);border:0;cursor:pointer;z-index:40;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .3s,transform .3s,visibility .3s,background .2s;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+.to-top:hover{background:#8f0000}
+.to-top:before{content:"";position:absolute;left:16px;top:19px;width:12px;height:12px;border:solid #fff;border-width:3px 0 0 3px;transform:rotate(45deg)}
